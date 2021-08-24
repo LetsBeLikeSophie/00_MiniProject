@@ -1,0 +1,49 @@
+[이클립스 자바파일들]
+
+주석 정리하고 다시 테스트 해보고 조금 더 보강하면 될듯
+
+
+[주석] 
+1. 	member 폴더 안 클래스들은 대충 함. 제일 큰 CsiMember 랑 CsiMemberAll 가 문제 
+=> JFrame 부분 심각함.............................................
+2.	common 폴더 안 클래스들도 대충 함. 나머지는 아래 참조
+CodeUtil
+	취미번호<->취미명 
+	직업번호<->직업명 사용하는 곳? JFrame 더 해야..
+DateUtil
+	cTime 이라는 함수가 있음 yyyy.MM.dd hh:mm:ss 로 날짜 형식 바꿔주는
+	이것도 사용하는 곳?
+	123 뽑는 부분????????
+	Main 에서 출력하는 부분??????????
+
+지수님 board 에서 delete parameter 빠졌다고 한 부분?
+select()랑 select 하는데 이름으로 하거나 아이디로 하거나 하는 부분 중복인지?
+
+
+
+[테이블 정의서] 
+
+에 common 폴더 클래스들도 정리해야함
+-일단 머릿속이 정리가 안되니까ㅋㅋㅋ어떻게 가식화 할지 좀 생각해봐야함
+먼저 common 이름 아래로 CodeUtil, DateUtil, CsiConnProperty, CsiBoardChabun, CsiMemberChabun 똑같이 함수 적고
+
+
+Member 에서는 	CodeUtil, DateUtil, CsiMemberChaBun, CsiConnProperty 사용
+
+CsiMemberAll 		=> CodeUtil 
+CsiMember 		=> CodeUtil, DateUtil, CsiMemberChaBun
+CsiMemberDAOImpl 	=> CsiConnProperty
+
+----------------------------------------------------------------------------------------
+
+Board 에서는 	CodeUtil, CsiBoardChabun, CsiConnProperty 사용
+
+CsiBoardScr		=> CsiBoardChabun
+CsiBoard 			=> CodeUtil
+CsiBoardDAOImpl		=> CsiConnProperty
+
+----------------------------------------------------------------------------------------
+
+Login 에서는 	CodeUtil
+
+CsiLoginDAOImpl 		=> CsiConnProperty
