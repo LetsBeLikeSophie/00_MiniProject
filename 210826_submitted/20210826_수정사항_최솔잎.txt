@@ -1,0 +1,45 @@
+
+[개발소스]
+
+210826	대상 :	member, memberall 자바파일
+	내용 : 	JFrame 부분 더 연습 (특히 그리드 나누는 부분) => 아직진행중
+
+	대상 : 	전체 파일 (특히 DAOImpl, sql)	
+	내용 : 	자바 이클립스 파일 선택과정에서 상위폴더 잘 못 선택해서 경로가 꼬임 
+		(내부 프로젝트랑 같이 생기는 bin폴더라던지 .classpath 등등 기본 파일들이 섞임)
+		수정 했으나 빨간줄이 생기는데 내용에는 에러가 없음 => 확인할 것
+
+
+[기타문서]
+
+210825	대상 :	테이블정의서, 다이어그램 엑셀파일
+	내용 : 	Member 테이블 다이어그램 수정, 추가된 부분 보완함
+		
+210826 	대상 :	테이블정의서, 다이어그램 엑셀파일
+	내용 : 	Board 다이어그램, Login 다이어그램 작성하는데로 파일 분리시키기.
+
+
+
+[기타메모]
+
+테이블 다이어그램 관련 내용 참고할 것
+
+Member 에서는 	CodeUtil, DateUtil, CsiMemberChaBun, CsiConnProperty 사용
+
+CsiMemberAll 		=> CodeUtil 
+CsiMember 		=> CodeUtil, DateUtil, CsiMemberChaBun
+CsiMemberDAOImpl 	=> CsiConnProperty
+
+----------------------------------------------------------------------------------------
+
+Board 에서는 	CodeUtil, CsiBoardChabun, CsiConnProperty 사용
+
+CsiBoardScr		=> CsiBoardChabun
+CsiBoard 			=> CodeUtil
+CsiBoardDAOImpl		=> CsiConnProperty
+
+----------------------------------------------------------------------------------------
+
+Login 에서는 	CodeUtil
+
+CsiLoginDAOImpl 		=> CsiConnProperty
