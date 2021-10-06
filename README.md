@@ -1,2 +1,4 @@
 # 00_MiniProject
-MiniProjects
+
+
+### This is what and how I am soloing.
