@@ -1,4 +1,1 @@
-# 00_MiniProject
-
-
-### This is what and how I am soloing.
+# This is what and how I am soloing.
