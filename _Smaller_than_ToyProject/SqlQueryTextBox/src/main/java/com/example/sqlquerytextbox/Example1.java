@@ -13,35 +13,29 @@ public class Example1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-//to-do: servlet filter
-
+        /*  to-do: servlet filter  */
         response.setContentType("text/html");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-//-----------------------------------------------------------------
-
+        /*  starts from here  */
         Table table = new Table();
         Comm comm = new Comm();
-
 
         String queryInput= request.getParameter("input");
         String queryAfter="";
         ArrayList output= new ArrayList();
 
-
-        //query taken ';'
+        /*  takeout ';' from input  */
         System.out.println("-----input : " + queryInput);
         queryAfter=comm.getQuery(queryInput);
         System.out.println("-----then, query: "+queryAfter);
- //       table.getColumns();
- //       System.out.println("-----Columns: "+table.COLUMNS);
+ //     table.getColumns();
+ //     System.out.println("-----Columns: "+table.COLUMNS);
         String keyword="";
         System.out.println(queryAfter.length());
         keyword = comm.getKeyword(queryAfter);
         System.out.println("-----keyword: "+keyword);
-
-
 
 
 /*

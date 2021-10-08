@@ -31,9 +31,15 @@ public class Comm {
         for (int i = 0; !wordIsFound ; i++) {
             System.out.println("----------------");
 
+            /*
+            find first letter of word :
+            is not "" and has next variable letter */
             if (letter != (query.charAt(i)) && letter != (query.charAt(i + 1))) {
                 System.out.println("---1query.chartAt[i]: " + query.charAt(i));
                 keyword += query.charAt(i);
+            /*
+            find last letter of word :
+            is not "" and has "" as next letter */
             } else if (letter != (query.charAt(i)) && letter == (query.charAt(i + 1))) {
                 System.out.println("---2query.chartAt[i]: " + query.charAt(i));
                 keyword += query.charAt(i);

@@ -11,7 +11,6 @@ public class Table {
 
     public void getColumns() {
 
-
         try {
             Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orclKOSMO00", "csi00", "csi1234");
             PreparedStatement pstmt = connection.prepareStatement("SELECT COLUMN_NAME FROM ALL_TAB_COLUMNS WHERE TABLE_NAME ='" + TABLE + "\'");
