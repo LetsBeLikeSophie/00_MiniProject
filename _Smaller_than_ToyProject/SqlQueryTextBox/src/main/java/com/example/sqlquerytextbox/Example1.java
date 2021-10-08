@@ -12,27 +12,39 @@ import java.util.Locale;
 public class Example1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+//to-do: servlet filter
+
         response.setContentType("text/html");
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
-        String query= request.getParameter("input");
+//-----------------------------------------------------------------
+
+        Table table = new Table();
+        Comm comm = new Comm();
+
+
+        String queryInput= request.getParameter("input");
+        String queryAfter="";
         ArrayList output= new ArrayList();
 
-        System.out.println("input : " + query);
 
-        if(query.contains(";")){
+        //query taken ';'
+        System.out.println("-----input : " + queryInput);
+        queryAfter=comm.getQuery(queryInput);
+        System.out.println("-----then, query: "+queryAfter);
+ //       table.getColumns();
+ //       System.out.println("-----Columns: "+table.COLUMNS);
+        String keyword="";
+        System.out.println(queryAfter.length());
+        keyword = comm.getKeyword(queryAfter);
+        System.out.println("-----keyword: "+keyword);
 
-            StringBuffer sb = new StringBuffer();
-            sb.append(query);
-            int index = sb.indexOf(";");
-            sb.deleteCharAt(index);
-            query = sb.toString().toUpperCase();
-            System.out.println("; << deleted");
-        }
-        else
-            query = query.toUpperCase();
 
+
+
+/*
         try {
             Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orclKOSMO00", "csi00","csi1234");
             PreparedStatement pstmt = connection.prepareStatement(query);
@@ -48,7 +60,7 @@ public class Example1 extends HttpServlet {
         }
 
         System.out.println(output);
-
+*/
     }
 
     @Override
