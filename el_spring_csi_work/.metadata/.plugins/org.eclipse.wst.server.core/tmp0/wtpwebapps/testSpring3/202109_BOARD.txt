@@ -1,0 +1,85 @@
+2021-01-09
+스프링 게시판 
+
+1. jdk 1.8
+2. tomcat 8.5 - jdk 7 and later
+	: Apache Tomcat Version 8.5.61
+	: Servlet SPEC 3.1 
+	: JSP SPEC 2.3
+	: EL SPEC 3.0
+	: WebSocket 1.1
+4. eclipse 
+	: eclipse202006 
+5. spring 
+	: 3.2.9
+6. sts 	Spring Tools 3
+	: Spring Tool 3 3.9.14.RELEASE
+7. mybatis 	
+	: mybatis-3.2.4
+8. spring-mybatis
+	: mybatis-spring-1.2.2
+9. log
+	: log4j-1.2.17
+10. JSON
+	: jackson-annotatins-2.5.4
+	: jackson-core-2.5.4
+	: jackson-databind-2.5.4 		
+11. fileupload
+	: cos.jar	
+	
+테이블 
+글번호 sbnum 
+제목 sbsubject
+작성자  sbname
+내용 sbcontent
+파일 sbfile
+비밀번호 sbpw
+삭제여부 sbdelyn	
+등록일 sbinsertdate
+삭제일 sbupdatedate
+
+CREATE TABLE SPRING_BOARD(
+	SBNUM VARCHAR2(20) PRIMARY KEY 
+   ,SBSUBJECT VARCHAR2(200) NOT NULL
+   ,SBNAME VARCHAR2(100) NOT NULL
+   ,SBCONTENT VARCHAR2(2000)
+   ,SBFILE VARCHAR2(300)
+   ,SBPW VARCHAR2(300)
+   ,SBDELYN VARCHAR2(1) NOT NULL
+   ,SBINSERTDATE DATE
+   ,SBUPDATEDATE DATE 
+);
+
+
+패키지
+a.b.c.com.board.controller
+	BoardController
+a.b.c.com.board.service
+	BoardService
+		public List<BoardVO> boardSelect(BoardVO bvo);
+		public List<BoardVO> boardSelectAll(BoardVO bvo);
+		public int boardInsert(BoardVO bvo);
+		public int boardUpdate(BoardVO bvo);
+		public int boardDelete(BoardVO bvo);
+	BoardServiceImpl
+a.b.c.com.board.dao
+	BoardDAO
+	BoardDAOImpl
+a.b.c.com.board.vo
+	BoardVO
+a.b.c.com.common
+a.b.c.com.common.service
+a.b.c.com.common.dao
+
+/mybatisconfig/mybatis-config.xml
+/mybatisquery/*.xml
+
+프론트 
+index.jsp
+/WEB-INF/views
+board.jsp
+boardInsert.jsp
+boardUpdate.jsp
+boardDelete.jsp
+boardSelect.jsp
+boardSelectAll.jsp

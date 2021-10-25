@@ -1,0 +1,44 @@
+package com.spring.board.vo;
+
+public class boardVO {
+	
+	
+	private String sbnum;
+	private String sbsubject;
+	private String sbname;
+	private String sbcontent;
+	private String sbfile;
+	private String sbpw;
+	private String sbdelyn;
+	private String sbinsertdate;
+	private String sbupdatedate;
+	
+	private String keyfilter;
+	private String keyword;
+	private String startdate;
+	private String enddate;
+	
+	
+	
+	public boardVO(String sbnum, String sbsubject, String sbname, String sbcontent, String sbfile, String sbpw,
+			String sbdelyn, String sbinsertdate, String sbupdatedate) {
+
+		this.sbnum = sbnum;
+		this.sbsubject = sbsubject;
+		this.sbname = sbname;
+		this.sbcontent = sbcontent;
+		this.sbfile = sbfile;
+		this.sbpw = sbpw;
+		this.sbdelyn = sbdelyn;
+		this.sbinsertdate = sbinsertdate;
+		this.sbupdatedate = sbupdatedate;
+	}
+	
+	
+	
+	
+	
+	
+
+	
+}

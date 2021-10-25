@@ -1,0 +1,13 @@
+package a.b.c.com.common.dao;
+
+import com.spring.board.vo.BoardVO;
+
+public class ChabunDAOImpl implements ChabunDAO {
+
+	@Override
+	public BoardVO getChabun() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

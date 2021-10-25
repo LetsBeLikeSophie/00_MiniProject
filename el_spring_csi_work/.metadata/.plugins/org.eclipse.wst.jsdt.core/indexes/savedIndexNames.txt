@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\00.KOSMO93\30.Web\el_spring_csi_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4262992530.index
+3517173836.index
+1393675087.index
+1605611872.index
+4238294238.index
